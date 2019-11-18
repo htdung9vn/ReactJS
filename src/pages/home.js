@@ -1,4 +1,5 @@
 import React from 'react';
+import Nav from '../components/carousels';
 
 class Home extends React.Component{
 
@@ -6,7 +7,7 @@ class Home extends React.Component{
         return(
             <div className='Home'>
                 <br/><br/>
-
+                <Nav />
             </div>
         );
     }
