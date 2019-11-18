@@ -7,6 +7,7 @@ import {
   } from "react-router-dom";
 import 'bootstrap/dist/css/bootstrap.css';
 import 'bootstrap/dist/js/bootstrap';
+import Home from '../pages/home';
 
 class Nav extends React.Component{
 
@@ -23,7 +24,7 @@ class Nav extends React.Component{
                     <div className="collapse navbar-collapse" id="navbarSupportedContent">
                         <ul className="navbar-nav mr-auto">
                         <li className="nav-item active">
-                            <Link className="nav-link" to=''>Home <span className="sr-only">(current)</span></Link>
+                            <Link className="nav-link" to='/'>Home</Link>
                         </li>
                         <li className="nav-item dropdown">
                             <Link className="nav-link dropdown-toggle" to='' id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -40,8 +41,8 @@ class Nav extends React.Component{
                     </div>
                     </nav>
                     <Switch>
-                        <Route path=''>
-
+                        <Route exact path='/'>
+                            <Home />
                         </Route>
                     </Switch>
                 </Router>
