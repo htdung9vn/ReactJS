@@ -8,6 +8,7 @@ import {
 import 'bootstrap/dist/css/bootstrap.css';
 import 'bootstrap/dist/js/bootstrap';
 import Home from '../pages/home';
+import Signin from '../pages/signin';
 
 class Nav extends React.Component{
 
@@ -27,11 +28,11 @@ class Nav extends React.Component{
                             <Link className="nav-link" to='/'>Home</Link>
                         </li>
                         <li className="nav-item dropdown">
-                            <Link className="nav-link dropdown-toggle" to='' id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <Link className="nav-link dropdown-toggle" to='/signin' id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             Dropdown
                             </Link>
                             <div className="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <Link className="dropdown-item" to=''>Action</Link>
+                            <Link className="dropdown-item" to='/signin' data-toggle="modal" data-target="#exampleModal">SignIn</Link>
                             <Link className="dropdown-item" to=''>Another action</Link>
                             <div className="dropdown-divider"></div>
                             <Link className="dropdown-item" to=''>Something else here</Link>
@@ -40,6 +41,7 @@ class Nav extends React.Component{
                         </ul>
                     </div>
                     </nav>
+                    <Signin />
                     <Switch>
                         <Route exact path='/'>
                             <Home />
